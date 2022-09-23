@@ -2,12 +2,14 @@
   /* eslint-disable */
   import Home from './components/Home.vue'
   import templatePage from './components/templatePage.vue'
+  import workOutPage from './components/WorkOutPage.vue'
   
   const routes = {
     '': Home,
     '/': Home,
     '#/': Home,
     '/TemplatePage': templatePage,
+    '/workOutPage': workOutPage,
   }
   
   export default {

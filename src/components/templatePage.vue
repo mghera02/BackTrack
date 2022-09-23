@@ -16,6 +16,8 @@
         },
         computed: {
         },
+        components: {
+        },
         mounted: function () {
         },
     }
