@@ -1,5 +1,5 @@
 <template>
-    <div class="bubble" :style="[getColor(), getSize()]">
+    <div class="bubble" :style="[getColor(), getSize(), getZLevel(), getPos()]">
     </div>
 </template>
 
@@ -21,11 +21,25 @@
                     height: this.size,
                     width: this.size,
                 }
+            },
+            getZLevel() {
+                return {
+                    zIndex: this.zLevel
+                }
+            },
+            getPos() {
+                return {
+                    position: "absolute",
+                    top: this.pos[0],
+                    left: this.pos[1],
+                }
             }
         },
         props: {
             color: String,
             size: String,
+            zLevel: Number,
+            pos: Array,
         },
         computed: {
         },
