@@ -1,9 +1,9 @@
 <template>
     <div id="workOutPage">
-        <dualBubble :color="darkBlue" :size="smallest"/>
-        <dualBubble :color="black" :size="small"/>
-        <dualBubble :color="white" :size="large"/>
-        <dualBubble :color="darkBlue" :size="largest"/>
+        <dualBubble :color="darkBlue" :size="small" :zLevel='1' :position='["26.5vw","7.5vw"]'/>
+        <dualBubble :color="black" :size="largest" :zLevel='0' :position='["45vw","2vw"]'/>
+        <dualBubble :color="white" :size="large" :zLevel='0' :position='["25vw", "24vw"]'/>
+        <dualBubble :color="darkBlue" :size="small" :zLevel='1' :position='["47.5vw","25vw"]'/>
     </div>
 </template>
 
@@ -14,13 +14,12 @@
         name: 'workOutPage',
         data() {
             return {
-                darkBlue:"#032539",
+                darkBlue:"#156595",
                 black: '#1D1D1D',
                 white: '#F4F4F4',
-                smallest: "20em",
-                small: "30em",
-                large: "25em",
-                largest: "20em",
+                small: "20vw",
+                large: "22.5vw",
+                largest: "25vw",
             }
         },
         methods: {
