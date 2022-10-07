@@ -1,12 +1,16 @@
 <template>
     <div class="dualBubble" :style="[getColor(), getSize(), getZLevel(), getPosition()]">
-        <div class="innerBubble">
-
-        </div>
+        <innerBubble 
+            :innerColor="innerColor"
+            :image="image"
+        >
+        </innerBubble>
     </div>
 </template>
 
 <script>
+    import innerBubble from './innerBubble.vue'
+
     export default {
         name: 'dualBubble',
         data() {
@@ -57,10 +61,13 @@
             size: String,
             zLevel: Number,
             position: Array,
+            innerColor: String,
+            image: String,
         },
         computed: {
         },
         components: {
+            innerBubble
         },
         mounted: function () {
         },
@@ -79,12 +86,5 @@
     .dualBubble:hover {
         z-index: 2 !important;
         box-shadow: 0em 0em 1em #fff;
-    }
-
-    .innerBubble { 
-        background:red;
-        width: 10vw;
-        height:10vw;
-        border-radius: 50%;
     }
 </style>
