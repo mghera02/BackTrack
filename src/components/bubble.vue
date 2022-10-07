@@ -5,7 +5,7 @@
 
 <script>
     export default {
-        name: 'templatePage',
+        name: 'bubble',
         data() {
             return {
             }
