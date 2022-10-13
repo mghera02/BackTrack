@@ -3,12 +3,16 @@
         <bubble :color="lightOrange" :size="small" :zLevel='1' :pos="['4vw', '74vw']"/>
         <bubble :color="teal" :size="big" :zLevel='0' :pos="['12vw', '60vw']"/>
         <bubble :color="darkBlue" :size="medium" :zLevel='1' :pos="['28vw', '68vw']"/>
-        <logInButton :color="halloween"/>
-        <logInButton :color="'black'"/>
         <div id="Header">
             Back Track
         </div>
-        <div id="Subheadding">
+        <div id="Subheader">
+            We got your back.
+        </div>
+        <hr>
+        <div>
+            <logInButton :color="halloween"/>
+            <logInButton :color="'black'"/>
         </div>
     </div>
 </template>
@@ -54,7 +58,28 @@
     }
     #Header {
         color: black;
-        font-size: 3em;
+        font-size: 3.15vw;
         font-family: 'Roboto', sans-serif;
+        position: relative;
+        top: 17vw;
+        left: 14.7vw;
+    }
+    #Subheader {
+        color: black;
+        font-size: 1.95vw;
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        top: 17vw;
+        left: 14.7vw;
+    }
+    hr {
+        border: none;
+        background: #fa991c;
+        opacity: 0.65;
+        width: 15vw;
+        height: 0.2vw;
+        position: relative;
+        left: -27.5vw;
+        top: 19vw;
     }
 </style>

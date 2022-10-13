@@ -29,11 +29,11 @@
 
 <style>
     .logInButton {
-        width: 14vw;
+        width: 15vw;
         height: 3vw;
         position: relative;
         left: 15vw;
-        top: 19vw;  
+        top: 21vw;  
         margin-bottom: 1vw;
     }
 </style>
