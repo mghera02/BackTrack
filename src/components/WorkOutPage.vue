@@ -1,9 +1,39 @@
 <template>
     <div id="workOutPage">
-        <dualBubble :color="darkBlue" :size="small" :zLevel='1' :position='["26.5vw","7.5vw"]'/>
-        <dualBubble :color="black" :size="largest" :zLevel='0' :position='["45vw","2vw"]'/>
-        <dualBubble :color="white" :size="large" :zLevel='0' :position='["25vw", "24vw"]'/>
-        <dualBubble :color="darkBlue" :size="small" :zLevel='1' :position='["47.5vw","25vw"]'/>
+        <div id="bubbleCollection">
+            <dualBubble 
+                :color="darkBlue" 
+                :size="small" 
+                :zLevel='1' 
+                :position='["19.5vw","7.5vw"]'
+                :innerColor = "white"
+                :image = "'workoutImage.png'"
+            />
+            <dualBubble 
+                :color="black" 
+                :size="largest" 
+                :zLevel='0' 
+                :position='["38vw","2vw"]'
+                :innerColor = "darkBlue"
+                :image = "'workoutImage.png'"
+            />
+            <dualBubble 
+                :color="white" 
+                :size="large" 
+                :zLevel='0' 
+                :position='["18vw", "24vw"]'
+                :innerColor = "darkBlue"
+                :image = "'workoutImage.png'"
+            />
+            <dualBubble 
+                :color="darkBlue" 
+                :size="small" 
+                :zLevel='1' 
+                :position='["39.5vw","25vw"]'
+                :innerColor = "white"
+                :image = "'workoutImage.png'"
+            />
+        </div>
     </div>
 </template>
 
@@ -38,8 +68,18 @@
 
 <style>
     #workOutPage {
+        position: relative;
         height: 100vh;
         width: 100vw;
         background: white;
+    }
+
+    #bubbleCollection {
+        width: 80%;
+        height: 100%;
+        position:absolute;
+        top:0vh;
+        border-right: 10vw solid #fa991c;
+        border-left:  10vw solid  #fa991c;
     }
 </style>
