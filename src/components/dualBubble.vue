@@ -1,5 +1,5 @@
 <template>
-    <div class="dualBubble" :style="[getColor(), getSize(), getZLevel(), getPosition()]">
+    <div class="dualBubble" @click="getClick()" :style="[getColor(), getSize(), getZLevel(), getPosition()]">
         <innerBubble 
             :innerColor="innerColor"
             :image="image"
@@ -54,6 +54,9 @@
                     left: this.position[0],
                     top: this.position[1],
                 }
+            },
+            getClick() {
+                this.$emit('getClick',this.num);
             }
         },
         props: {
@@ -63,6 +66,7 @@
             position: Array,
             innerColor: String,
             image: String,
+            num: Number
         },
         computed: {
         },
