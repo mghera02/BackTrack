@@ -42,7 +42,11 @@
                 @getClick="getClick"
                 :num = '4'
             />
-            <popup :style="ifDisplay()" @click="closePopup"/>
+            <popup 
+                :style="ifDisplay()" 
+                :image = "popUpImage"
+                @click="closePopup"
+            />
         </div>
     </div>
 </template>
@@ -62,6 +66,7 @@
                 large: "22.5vw",
                 largest: "25vw",
                 numSelected: -1,
+                popUpImage: "workoutImage.png",
             }
         },
         methods: {
