@@ -1,12 +1,14 @@
 <template>
-    <div id = "leftPic">
-        <div id="innerImage" :style="[getImage()]"></div>
+    <div id = "leftBox">
+        <div id="innerImage">
+            <div :style="[getImage()]"></div>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'templatePage',
+        name: 'leftBox',
         data() {
             return {
             }
@@ -14,10 +16,15 @@
         methods: {
             getImage() {
                 return {
+                    'position': 'relative',
+                    'left': '2vw',
+                    'top': '2vw',
+                    'width': '20vw',
+                    'height': '20vw',        
                     'background-image': `url(${this.image})`,
                     'background-position': 'center',
                     'background-repeat': 'no-repeat',
-                    'background-size': 'cover',
+                    'background-size': 'contain',
                 }
             }
         },
@@ -34,17 +41,11 @@
 </script>
 
 <style>
-    #leftPic {
+    #leftBox {
         position:relative;
         background:white;
-        width:20vw;
-        height:55vh;
-        left: 5vw;
-        top:7.5vh;
-    }
-
-    #innerImage {
-        width: 80%;
-        height: 80%;
+        height: 70%;
+        top:15%;
+        width: 25vw;
     }
 </style>
