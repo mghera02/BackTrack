@@ -1,9 +1,9 @@
 <template>
-    <div id="Home">
+    <!-- <div id="Home">
         <bubble :color="lightOrange" :size="small"/>
         <bubble :color="teal" :size="big"/>
         <bubble :color="darkBlue" :size="medium"/>
-    </div>
+    </div> -->
 
     <h1>Create an Account</h1>
     <p><input type="text" placeholder="Email" v-model="email" /></p>
@@ -56,7 +56,7 @@
       .then((data) => {
         console.log(data);
         console.log('Successfully registered!');
-        router.push('/feed') // redirect to the feed
+        router.push('/workouts') // redirect to the feed
       })
       .catch(error => {
         console.log(error.code)
