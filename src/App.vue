@@ -3,6 +3,7 @@
   import Home from './components/Home.vue'
   import templatePage from './components/templatePage.vue'
   import workOutPage from './components/WorkOutPage.vue'
+  import contact from './components/Contact.vue'
   
   const routes = {
     '': Home,
@@ -10,6 +11,7 @@
     '#/': Home,
     '/TemplatePage': templatePage,
     '/workOutPage': workOutPage,
+    '/contact': contact,
   }
   
   export default {
