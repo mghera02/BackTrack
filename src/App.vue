@@ -4,6 +4,7 @@
   import templatePage from './components/templatePage.vue'
   import workOutPage from './components/WorkOutPage.vue'
   import contact from './components/Contact.vue'
+  import scanning from './components/Scanning.vue'
   
   const routes = {
     '': Home,
@@ -11,7 +12,8 @@
     '#/': Home,
     '/TemplatePage': templatePage,
     '/workOutPage': workOutPage,
-    '/contact': contact,
+    '/Contact': contact,
+    '/Scanning': scanning,
   }
   
   export default {
@@ -39,12 +41,17 @@
   
   <style>
     html, body {
-      height: 100%;
+      height: 100vh;
+      width: 100vw;
       border: none;
       margin: 0;
       padding: 0;
       overflow: hidden;
       background: black;
       color: white;
+    }
+    #app {
+      width:100%;
+      height:100%;
     }
   </style>
