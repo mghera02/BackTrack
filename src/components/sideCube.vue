@@ -68,8 +68,8 @@
 <style>
     #sideCube {
         background: #44ff73;
-        width:100px;
-        height:100px;
+        width:11vw;
+        height:11vw;
         z-index: 0;
         animation: greenFadeAnim 4s infinite;
         border-radius:5%;
