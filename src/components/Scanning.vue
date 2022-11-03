@@ -1,11 +1,13 @@
 <template>
     <div id="scanningPage">
+        <triangle />
         <centerRecorder />
     </div>
 </template>
 
 <script>
     import centerRecorder from './centerRecorder.vue'
+    import triangle from './triangle.vue'
 
     export default {
         name: 'Scanning',
@@ -20,7 +22,8 @@
         computed: {
         },
         components: {
-            centerRecorder
+            centerRecorder,
+            triangle
         },
         mounted: function () {
         },
@@ -31,7 +34,7 @@
     #scanningPage {
         width:100%;
         height:100%;
-        background: #032539;
+        background: #00698A;
         display: flex;
         align-items: center;
         justify-content: center;

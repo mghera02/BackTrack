@@ -2,9 +2,9 @@
     <div id="centerRecorder">
         <div id="backDrop"></div>
         <sideCube :pos='["-20px","-20px"]' :color="color"/>
-        <sideCube :pos='["-20px","570px"]' :color="color"/>
-        <sideCube :pos='["570px","-20px"]' :color="color"/>
-        <sideCube :pos='["570px","570px"]' :color="color"/>
+        <sideCube :pos='["-20px","470px"]' :color="color"/>
+        <sideCube :pos='["470px","-20px"]' :color="color"/>
+        <sideCube :pos='["470px","470px"]' :color="color"/>
     </div>
 </template>
 
@@ -36,8 +36,8 @@
     #centerRecorder {
         position:relative;
         background: white;
-        width:650px;
-        height:650px;
+        width:550px;
+        height:550px;
         display: flex;
         z-index:2;
     }
