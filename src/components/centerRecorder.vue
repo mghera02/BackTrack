@@ -15,7 +15,7 @@
         name: 'centerRecorder',
         data() {
             return {
-                color: 'green'
+                color: 'yellow'
             }
         },
         methods: {

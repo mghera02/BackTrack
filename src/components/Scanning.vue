@@ -1,18 +1,23 @@
 <template>
     <div id="scanningPage">
-        <triangle />
+        <triangle :color="orange" :size="'large'"/>
+        <triangle :color="blue" :size="'small'"/>
         <centerRecorder />
+        <timer />
     </div>
 </template>
 
 <script>
     import centerRecorder from './centerRecorder.vue'
     import triangle from './triangle.vue'
+    import timer from './timer.vue'
 
     export default {
         name: 'Scanning',
         data() {
             return {
+                orange: "orange",
+                blue: "#00698A"
             }
         },
         methods: {
@@ -23,7 +28,8 @@
         },
         components: {
             centerRecorder,
-            triangle
+            triangle,
+            timer
         },
         mounted: function () {
         },

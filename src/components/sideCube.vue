@@ -36,13 +36,8 @@
                         break;
                     case 'yellow':
                         anim = 'yellowFadeAnim'
-                        background = '#44ff73';
-                        border = '#228939';
-                        break;
-                    case 'white':
-                        anim = 'cyanFadeAnim'
-                        background = '#44ff73';
-                        border = '#228939';
+                        background = '#fafa63';
+                        border = '#717a10';
                         break;
                 }
                 return {
@@ -115,6 +110,27 @@
             0px 0px 15px 10px #a02020,
             0px 0px 15px 20px #901010,
             0px 0px 15px 25px #800000
+        }
+    }
+
+    @keyframes yellowFadeAnim {
+        0%   { box-shadow: 
+            0px 0px 15px 5px #fafa63,
+            0px 0px 15px 10px #f0f053,
+            0px 0px 15px 20px #eaea43,
+            0px 0px 15px 25px #e0e043
+        }
+        50%   { box-shadow: 
+            0px 0px 7px 2.5px #cccc10,
+            0px 0px 7px 5px #bcbc00,
+            0px 0px 7px 10px #acac00,
+            0px 0px 7px 12.5px #9c9c00
+        }
+        100%   { box-shadow: 
+            0px 0px 15px 5px #fafa63,
+            0px 0px 15px 10px #f0f053,
+            0px 0px 15px 20px #eaea43,
+            0px 0px 15px 25px #e0e043
         }
     }
 </style>
