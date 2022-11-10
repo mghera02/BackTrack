@@ -39,10 +39,15 @@
                         background = '#fafa63';
                         border = '#717a10';
                         break;
+                    case 'white':
+                        anim = 'whiteFadeAnim'
+                        background = '#fff';
+                        border = '#666';
+                        break;
                 }
                 return {
                     background: background,
-                    animation: `${anim} 4s infinite`,
+                    animation: `${anim} 3s infinite`,
                     borderColor: border
                 }
             }
@@ -131,6 +136,27 @@
             0px 0px 15px 10px #f0f053,
             0px 0px 15px 20px #eaea43,
             0px 0px 15px 25px #e0e043
+        }
+    }
+
+    @keyframes whiteFadeAnim {
+        0%   { box-shadow: 
+            0px 0px 15px 6px #ccc,
+            0px 0px 15px 8px #eee,
+            0px 0px 15px 10px #fff,
+            0px 0px 15px 12px #fff
+        }
+        50%   { box-shadow: 
+            0px 0px 5px 1px #999,
+            0px 0px 5px 2px #aaa,
+            0px 0px 5px 3px #bbb,
+            0px 0px 5px 4px #ccc
+        }
+        100%   { box-shadow: 
+            0px 0px 15px 6px #ccc,
+            0px 0px 15px 8px #eee,
+            0px 0px 15px 10px #fff,
+            0px 0px 15px 12px #fff
         }
     }
 </style>
