@@ -14,7 +14,7 @@
 </template>
 
 <script>
-    import bubble from './bubble.vue'
+    import bubble from '../Home/bubble.vue'
     export default {
         name: 'Contact',
         data() {
@@ -70,11 +70,11 @@
         left: -24vw;
     }
     #Gmail {
-/*        width: 50%;
-        height: 50%;
-        background-image: url('../assets/gmail.png');
+        width: 7.5%;
+        height: 7.5%;
+        background-image: url('../../assets/gmail.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;*/
+        background-size: cover;
     }
 </style>

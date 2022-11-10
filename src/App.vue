@@ -1,9 +1,9 @@
 <script>
   /* eslint-disable */
-  import Home from './components/Home.vue'
+  import Home from './components/Home/Home.vue'
   import templatePage from './components/templatePage.vue'
   import workOutPage from './components/WorkOut/WorkOutPage.vue'
-  import contact from './components/Contact.vue'
+  import contact from './components/Contact/Contact.vue'
   import scanning from './components/Scanning/Scanning.vue'
   
   const routes = {
