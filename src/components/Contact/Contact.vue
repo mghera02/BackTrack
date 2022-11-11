@@ -3,13 +3,16 @@
         <div id="WhiteBox">
             <bubble :color="lightOrange" :size="small" :zLevel='1' :pos="['20vh', '10vw']"/>
             <bubble :color="teal" :size="big" :zLevel='0' :pos="['25vh', '4vw']"/>
-            <bubble :color="darkBlue" :size="medium" :zLevel='1' :pos="['40vh', '8vw']"/>
+            <bubble :color="darkBlue" :size="medium" :zLevel='1' :pos="['40vh', '7vw']"/>
+            <div id="Header">
+                Contact us
+            </div>
+            <div id="GmailParent">
+                <div id="Gmail">
+                </div>
+            </div>
         </div>
-        <div id="Header">
-            Contact us
-        </div>
-        <div id="Gmail">
-        </div>
+
     </div>
 </template>
 
@@ -55,23 +58,27 @@
     #WhiteBox {
         background: white;
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         height: 70vh;
         width: 40vw;
     }
     #Header {
         color: black;
-        font-size: 3.15vw;
+        font-size: 3.5vw;
         font-family: 'Roboto', sans-serif;
         position: relative;
-        top: -4vh;
-        left: -24vw;
+        top: 15vw;
+        left: 16vw;
+    }
+    #GmailParent {
+        position: relative;
+        top: 20vw;
+        left: 16vw;
+        width: 50%;
+        height: 50%; 
     }
     #Gmail {
-        width: 7.5%;
-        height: 7.5%;
+        width: 6vw;
+        height: 4vw;
         background-image: url('../../assets/gmail.png');
         background-position: center;
         background-repeat: no-repeat;
