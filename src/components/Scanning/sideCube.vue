@@ -1,6 +1,5 @@
 <template>
-    <div id="sideCube" :style="[getPos(), getColor()]">
-    </div>
+    <div id="sideCube" :style="[getPos(), getColor()]"></div>
 </template>
 
 <script>

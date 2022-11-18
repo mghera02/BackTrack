@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="triangleContainer">
         <div id="triangle" :style="[getAppearance()]">
         </div>
         <div v-if="color=='orange'" id="stick">
@@ -61,5 +61,9 @@
         position:absolute;
         top:0;
         left:90px;
+    }
+
+    #triangleContainer {
+        cursor:pointer;
     }
 </style>

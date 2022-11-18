@@ -2,7 +2,7 @@
     <div id="rightBox">
         <h2>This is a Title</h2>
         <h5>This is some content</h5>
-        <div id="startTrackingBtn"> <span id="arrowSymbol">&#8594;</span> <br>Start Tracking</div>
+        <div id="startTrackingBtn" @click="goToScanPage()"> <span id="arrowSymbol">&#8594;</span> <br>Start Tracking</div>
     </div>
 </template>
 
@@ -14,6 +14,9 @@
             }
         },
         methods: {
+            goToScanPage() {
+                window.location.href = "/#/Scanning";
+            }
         },
         props: {
             image: String

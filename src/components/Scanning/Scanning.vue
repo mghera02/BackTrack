@@ -1,9 +1,12 @@
 <template>
     <div id="scanningPage">
-        <triangle :color="orange" :size="'large'"/>
-        <triangle :color="blue" :size="'small'"/>
+        <triangle @click="triangleHit()" :color="orange" :size="'large'"/>
+        <triangle @click="triangleHit()" :color="blue" :size="'small'"/>
         <centerRecorder />
         <timer />
+        <div v-if="popUp" id="detailPopUp">
+            
+        </div>
     </div>
 </template>
 
@@ -17,10 +20,15 @@
         data() {
             return {
                 orange: "orange",
-                blue: "#00698A"
+                blue: "#00698A",
+                popUp: false,
             }
         },
         methods: {
+            triangleHit() {
+                this.popUp = true;
+                console.log("hello");
+            }
         },
         props: {
         },
@@ -44,5 +52,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    #detailPopUp {
+        width: 10vw;
+        height: 10vw;
+        background: white;
+        position: absolute;
     }
 </style>
