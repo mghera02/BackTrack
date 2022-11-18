@@ -4,13 +4,17 @@
             <bubble :color="lightOrange" :size="small" :zLevel='1' :pos="['20vh', '10vw']"/>
             <bubble :color="teal" :size="big" :zLevel='0' :pos="['25vh', '4vw']"/>
             <bubble :color="darkBlue" :size="medium" :zLevel='1' :pos="['40vh', '7vw']"/>
-            <div id="Header">
-                Contact us
-            </div>
+            <div id="ContactHeader">Contact us</div>
             <div id="GmailParent">
-                <div id="Gmail">
-                </div>
+                <div id="Gmail"></div>
             </div>
+            <div id="InstagramParent">
+                <div id="Instagram"></div>
+            </div>
+            <div id="TwitterParent">
+                <div id="Twitter"></div>
+            </div>
+
         </div>
 
     </div>
@@ -61,7 +65,7 @@
         height: 70vh;
         width: 40vw;
     }
-    #Header {
+    #ContactHeader {
         color: black;
         font-size: 3.5vw;
         font-family: 'Roboto', sans-serif;
@@ -71,15 +75,45 @@
     }
     #GmailParent {
         position: relative;
-        top: 20vw;
+        top: 18vw;
         left: 16vw;
         width: 50%;
         height: 50%; 
     }
     #Gmail {
-        width: 6vw;
-        height: 4vw;
+        width: 5vw;
+        height: 3.5vw;
         background-image: url('../../assets/gmail.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #InstagramParent {
+        position: relative;
+        top: 0.5vw;
+        left: 22.75vw;
+        width: 30%;
+        height: 30%; 
+    }
+    #Instagram {
+        width: 4vw;
+        height: 4vw;
+        background-image: url('../../assets/instagram.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #TwitterParent {
+        position: relative;
+        top: -10.5vw;
+        left: 28vw;
+        width: 30%;
+        height: 30%;
+    }
+    #Twitter {
+        width: 5.3vw;
+        height: 5.3vw;
+        background-image: url('../../assets/twitter.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
