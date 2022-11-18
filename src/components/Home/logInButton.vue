@@ -33,7 +33,7 @@
         height: 3vw;
         position: relative;
         left: 15vw;
-        top: 21vw;  
+        top: 18vw;  
         margin-bottom: 1vw;
     }
 </style>

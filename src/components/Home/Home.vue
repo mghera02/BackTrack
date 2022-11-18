@@ -3,16 +3,13 @@
         <bubble :color="lightOrange" :size="small" :zLevel='1' :pos="['4vw', '74vw']"/>
         <bubble :color="teal" :size="big" :zLevel='0' :pos="['12vw', '60vw']"/>
         <bubble :color="darkBlue" :size="medium" :zLevel='1' :pos="['28vw', '68vw']"/>
-        <div id="Header">
-            Back Track
-        </div>
-        <div id="Subheader">
-            We got your back.
-        </div>
+        <div id="Header">Back Track</div>
+        <div id="Subheader">We got your back.</div>
         <hr>
         <div>
             <logInButton :color="halloween"/>
             <logInButton :color="'black'"/>
+            <logInButton @click="goToWorkoutPage()" :color="'blue'"/>
         </div>
     </div>
 </template>
@@ -35,6 +32,9 @@
             }
         },
         methods: {
+            goToWorkoutPage() {
+                window.location.href = "/#/workOutPage"
+            }
         },
         props: {
         },
@@ -61,7 +61,7 @@
         font-size: 3.15vw;
         font-family: 'Roboto', sans-serif;
         position: relative;
-        top: 17vw;
+        top: 15vw;
         left: 14.7vw;
     }
     #Subheader {
@@ -69,7 +69,7 @@
         font-size: 1.95vw;
         font-family: 'Roboto', sans-serif;
         position: relative;
-        top: 17vw;
+        top: 15vw;
         left: 14.7vw;
     }
     hr {
@@ -80,6 +80,6 @@
         height: 0.2vw;
         position: relative;
         left: -27.5vw;
-        top: 19vw;
+        top: 17vw;
     }
 </style>
