@@ -14,9 +14,7 @@
             <div id="TwitterParent">
                 <div id="Twitter"></div>
             </div>
-
         </div>
-
     </div>
 </template>
 
@@ -60,6 +58,8 @@
         justify-content: center;
     }
     #WhiteBox {
+        display: flex;
+        flex-direction: row;
         background: white;
         position: relative;
         height: 70vh;
@@ -75,14 +75,15 @@
     }
     #GmailParent {
         position: relative;
-        top: 18vw;
-        left: 16vw;
-        width: 50%;
-        height: 50%; 
+        top: 22vw;
+        left: -0.5vw;
+        /*width: 50%;
+        height: 50%;*/
+        width: 5.4vw;
     }
     #Gmail {
-        width: 5vw;
-        height: 3.5vw;
+        width: 5.4vw;
+        height: 4.3vw;
         background-image: url('../../assets/gmail.png');
         background-position: center;
         background-repeat: no-repeat;
@@ -90,10 +91,11 @@
     }
     #InstagramParent {
         position: relative;
-        top: 0.5vw;
-        left: 22.75vw;
-        width: 30%;
-        height: 30%; 
+        top: 22vw;
+        left: 1vw;
+        width: 4vw;
+        /*width: 30%;
+        height: 30%;*/
     }
     #Instagram {
         width: 4vw;
@@ -105,14 +107,19 @@
     }
     #TwitterParent {
         position: relative;
-        top: -10.5vw;
-        left: 28vw;
-        width: 30%;
+        top: 21.5vw;
+        left: 1.9vw;
+        width: 5.1vw;
+        height: 5.1vw;
+        /*width: 30%;
         height: 30%;
+        border: solid;
+        border-color: red;*/
+
     }
     #Twitter {
-        width: 5.3vw;
-        height: 5.3vw;
+        width: 5.1vw;
+        height: 5.1vw;
         background-image: url('../../assets/twitter.jpg');
         background-position: center;
         background-repeat: no-repeat;
