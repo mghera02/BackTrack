@@ -1,11 +1,32 @@
 <template>
     <div id="scanningPage">
-        <triangle @click="triangleHit()" :color="orange" :size="'large'"/>
-        <triangle @click="triangleHit()" :color="blue" :size="'small'"/>
+        <triangle 
+            @click="triangleHit()" 
+            :color="orange" 
+            :size="'large'"
+        />
+        <triangle 
+            @click="triangleHit()" 
+            :color="blue" 
+            :size="'small'"
+        />
         <centerRecorder />
         <timer />
         <div v-if="popUp" id="detailPopUp">
-            
+            <div id="popUpBody">
+                <div id="popUpTitle">
+                    Color Meanings
+                </div>
+
+                <coloredCircle />
+
+                <div id="returnBtn" @click="popUpClose()">
+                    <div id="returnSymbol">
+                        &#8594;
+                    </div>
+                    Return
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -14,6 +35,7 @@
     import centerRecorder from './centerRecorder.vue'
     import triangle from './triangle.vue'
     import timer from './timer.vue'
+    import coloredCircle from './coloredCircle.vue'
 
     export default {
         name: 'Scanning',
@@ -26,8 +48,14 @@
         },
         methods: {
             triangleHit() {
-                this.popUp = true;
-                console.log("hello");
+                if(this.popUp) {
+                    this.popUp = false;
+                } else {
+                    this.popUp = true;
+                }
+            },
+            popUpClose() {
+                this.popUp = false;
             }
         },
         props: {
@@ -37,7 +65,8 @@
         components: {
             centerRecorder,
             triangle,
-            timer
+            timer,
+            coloredCircle
         },
         mounted: function () {
         },
@@ -45,6 +74,7 @@
 </script>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
     #scanningPage {
         width:100%;
         height:100%;
@@ -55,9 +85,53 @@
     }
 
     #detailPopUp {
-        width: 10vw;
-        height: 10vw;
-        background: white;
+        width: 70vw;
+        height: 80vh;
+        background: #F4F4F4;
         position: absolute;
+        top: 10vh;
+        left: 15vw;
+        z-index: 2;
+    }
+
+    #popUpTitle {
+        text-align:center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 5.6vw;
+        transform: scaleX(1.15);
+        color:black;
+        position:relative;
+        top:6vw;
+        text-shadow: 1px 2px 4px #333;
+    }
+
+    #returnSymbol {
+        font-size: 2em;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+    }
+
+    #popUpBody {
+        position:relative;
+        top:0vw;
+        left:0vw;
+        width:100%;
+        height:100%;
+        align-content: bottom;
+    }
+
+    #returnBtn {
+        position:absolute;
+        top:auto;
+        bottom:2vw;
+        left: 85%;
+        width:10%;
+        font-size: 1.5em;
+        text-align: center;
+        color: black;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
     }
 </style>
