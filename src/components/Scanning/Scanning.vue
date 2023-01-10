@@ -18,7 +18,11 @@
                     Color Meanings
                 </div>
 
-                <coloredCircle />
+                <div id="colorGroup">
+                    <coloredCircle :color="white"/>
+                    <coloredCircle :color="red"/>
+                    <coloredCircle :color="green"/>
+                </div>
 
                 <div id="returnBtn" @click="popUpClose()">
                     <div id="returnSymbol">
@@ -41,6 +45,9 @@
         name: 'Scanning',
         data() {
             return {
+                white: "white",
+                red: "#FF3055",
+                green: "#0EEF4d",
                 orange: "orange",
                 blue: "#00698A",
                 popUp: false,
@@ -119,6 +126,15 @@
         width:100%;
         height:100%;
         align-content: bottom;
+    }
+
+    #colorGroup {
+        position:relative;
+        display: flex;
+        flex-direction: row;
+        position:relative;
+        top: 15vw;
+        left: 10vw;
     }
 
     #returnBtn {
