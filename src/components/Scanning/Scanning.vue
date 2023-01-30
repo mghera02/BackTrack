@@ -23,6 +23,17 @@
                     <coloredCircle :color="red"/>
                     <coloredCircle :color="green"/>
                 </div>
+                <div id="labelGroup">
+                    <div id="circleLabel">
+                        Not sensing!
+                    </div>
+                    <div id="circleLabel">
+                        Adjust your posture!
+                    </div>
+                    <div id="circleLabel">
+                        You're good!
+                    </div>
+                </div>
 
                 <div id="returnBtn" @click="popUpClose()">
                     <div id="returnSymbol">
@@ -133,8 +144,33 @@
         display: flex;
         flex-direction: row;
         position:relative;
+        top: 10vw;
+        left: 10vw;
+        width: 80vw;
+    }
+
+    #labelGroup {
+        color: black;
+        font-size: 2vw;
+        position:relative;
+        display: flex;
+        flex-direction: row;
+        position:relative;
         top: 15vw;
         left: 10vw;
+        width: 82vw;
+    }
+
+    #circleLabel {
+        position: relative;
+        top: -10vw;
+        left: 1vw;
+        width: 12.5vw;
+        height: 12.5vw;
+        display: flex;
+        flex-direction: row;
+        text-align:center;
+        margin-right:5vw;
     }
 
     #returnBtn {

@@ -18,18 +18,11 @@
                     borderColor = true;
                 }
 
-                if(borderColor) {
-                    return {
-                        'border': 'solid',
-                        'border-color': 'black', 
-                        'background': this.color,
-                    }
-                } else {
-                    return {
-                        'border': 'solid',
-                        'border-color': 'black', 
-                        'background': this.color,
-                    }
+                return {
+                    'border': 'solid',
+                    'border-width': '.2vw',
+                    'border-color': (borderColor) ? 'black': 'rgb(0,0,0,0)', 
+                    'background': this.color,
                 }
             }
         },
@@ -56,6 +49,6 @@
         border-radius: 50%;
         display: flex;
         flex-direction: row;
-        margin-right:5vw;
+        margin-right:6vw;
     }
 </style>
