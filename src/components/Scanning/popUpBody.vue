@@ -1,31 +1,42 @@
 <template>
-    <div id="scanningPage">
-        <triangle 
-            @click="triangleHit()" 
-            :color="orange" 
-            :size="'large'"
-        />
-        <triangle 
-            @click="triangleHit()" 
-            :color="blue" 
-            :size="'small'"
-        />
-        <centerRecorder />
-        <timer />
-        <div v-if="popUp">
-            <popUpBody />
+    <div id="detailPopUp">
+        <div id="popUpBody">
+            <div id="popUpTitle">
+                Color Meanings
+            </div>
+
+            <div id="colorGroup">
+                <coloredCircle :color="white"/>
+                <coloredCircle :color="red"/>
+                <coloredCircle :color="green"/>
+            </div>
+            <div id="labelGroup">
+                <div id="circleLabel">
+                    Not sensing!
+                </div>
+                <div id="circleLabel">
+                    Adjust your posture!
+                </div>
+                <div id="circleLabel">
+                    You're good!
+                </div>
+            </div>
+
+            <div id="returnBtn" @click="popUpClose()">
+                <div id="returnSymbol">
+                    &#8594;
+                </div>
+                Return
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-    import centerRecorder from './centerRecorder.vue'
-    import triangle from './triangle.vue'
-    import timer from './timer.vue'
-    import popUpBody from './popUpBody.vue'
-   
+    import coloredCircle from './coloredCircle.vue'
+
     export default {
-        name: 'Scanning',
+        name: 'PopUpBody',
         data() {
             return {
                 white: "white",
@@ -53,10 +64,7 @@
         computed: {
         },
         components: {
-            centerRecorder,
-            triangle,
-            timer,
-            popUpBody
+            coloredCircle
         },
         mounted: function () {
         },
@@ -65,15 +73,6 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-    #scanningPage {
-        width:100%;
-        height:100%;
-        background: #00698A;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     #detailPopUp {
         width: 70vw;
         height: 45vw;
