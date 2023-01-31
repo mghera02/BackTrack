@@ -1,9 +1,11 @@
 <template>
     <div id="Contact">
         <div id="WhiteBox">
-            <bubble :color="lightOrange" :size="small" :zLevel='1' :pos="['20vh', '10vw']"/>
-            <bubble :color="teal" :size="big" :zLevel='0' :pos="['25vh', '4vw']"/>
-            <bubble :color="darkBlue" :size="medium" :zLevel='1' :pos="['40vh', '7vw']"/>
+            <div id="BubbleBox">
+                <bubble :color="lightOrange" :size="small" :zLevel='1' :pos="['20vh', '10vw']"/>
+                <bubble :color="teal" :size="big" :zLevel='0' :pos="['25vh', '4vw']"/>
+                <bubble :color="darkBlue" :size="medium" :zLevel='1' :pos="['40vh', '7vw']"/>
+            </div>
             <div id="ContactHeader">Contact us</div>
             <div id="GmailParent">
                 <div id="Gmail"></div>
@@ -65,6 +67,14 @@
         height: 70vh;
         width: 40vw;
     }
+    #BubbleBox {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        border-width: 0.25vw;
+        border-color: red;
+        
+    }
     #ContactHeader {
         color: black;
         font-size: 3.5vw;
@@ -115,7 +125,6 @@
         height: 30%;
         border: solid;
         border-color: red;*/
-
     }
     #Twitter {
         width: 5.1vw;

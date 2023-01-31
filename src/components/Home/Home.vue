@@ -1,5 +1,6 @@
 <template>
     <div id="Home">
+        <div id="HeaderImg"></div>
         <bubble :color="lightOrange" :size="small" :zLevel='1' :pos="['4vw', '74vw']"/>
         <bubble :color="teal" :size="big" :zLevel='0' :pos="['12vw', '60vw']"/>
         <bubble :color="darkBlue" :size="medium" :zLevel='1' :pos="['28vw', '68vw']"/>
@@ -55,6 +56,15 @@
         height: 100vh;
         width: 100vw;
         background: white;
+    }
+    #HeaderImg {
+        background-image: ('../../assets\backtrackB.png');
+        top: 15vw;
+        left: 14.7vw;
+        height: 15vh;
+        width: 15vw;
+        border-width: 1vw;
+        border-color: red;
     }
     #Header {
         color: black;
