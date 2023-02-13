@@ -1,5 +1,5 @@
 <template>
-    <div id="Home">
+    <!-- <div id="Home">
         <div id="HeaderImg"></div>
         <bubble :color="lightOrange" :size="small" :zLevel='1' :pos="['4vw', '74vw']"/>
         <bubble :color="teal" :size="big" :zLevel='0' :pos="['12vw', '60vw']"/>
@@ -12,7 +12,17 @@
             <logInButton :color="'black'"/>
             <logInButton @click="goToWorkoutPage()" :color="'blue'"/>
         </div>
-    </div>
+    </div> -->
+    <h1>Create an Account</h1>
+    <p><input type="text" placeholder="Email" v-model="email1" /></p>
+    <p><input type="password" placeholder="Password" v-model="password1" /></p>
+    <p><button @click="register">Submit</button></p>
+
+    <h1>Login to Your Account</h1>
+    <p><input type="text" placeholder="Email" v-model="email2" /></p>
+    <p><input type="password" placeholder="Password" v-model="password2" /></p>
+    <p v-if="errMsg">{{ errMsg }}</p>
+    <p><button @click="signIn">Submit</button></p>
 </template>
 
 <script>
@@ -48,6 +58,64 @@
         mounted: function () {
         }
     }
+</script>
+
+<script setup>
+  import { ref } from 'vue'
+  import firebase from 'firebase/compat/app';
+  import 'firebase/compat/auth';
+  import 'firebase/compat/firestore';
+  import { useRouter } from 'vue-router' // import router
+  const email1 = ref('')
+  const password1 = ref('')
+  const router = useRouter() // get a reference to our vue router
+
+  // Register (Account should NOT exist with given email)
+  const register = () => {
+    firebase
+      .auth() // get the auth api
+      .createUserWithEmailAndPassword(email1.value, password1.value) // need .value because ref()
+      .then((data) => {
+        console.log(data);
+        console.log('Successfully registered!');
+        router.push('/#/workOutPage') // redirect to the feed
+      })
+      .catch(error => {
+        console.log(error.code)
+        alert(error.message);
+      });
+  }
+
+  // Sign In (Account SHOULD exist with given email)
+  const email2 = ref('')
+  const password2 = ref('')
+  const errMsg = ref() // ERROR MESSAGE
+  const signIn = () => { // we also renamed this method
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email2.value, password2.value) // THIS LINE CHANGED
+      .then((data) => {
+        console.log(data);
+        console.log('Successfully logged in!');
+        router.push('/#/workOutPage') // redirect to the workout page
+      })
+      .catch(error => {
+        switch (error.code) {
+          case 'auth/invalid-email':
+              errMsg.value = 'Invalid email'
+              break
+          case 'auth/user-not-found':
+              errMsg.value = 'No account with that email was found'
+              break
+          case 'auth/wrong-password':
+              errMsg.value = 'Incorrect password'
+              break
+          default:
+              errMsg.value = 'Email or password was incorrect'
+              break
+        }
+      });
+  }
 </script>
 
 <style>
