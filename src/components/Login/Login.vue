@@ -1,6 +1,6 @@
 <script setup>
-import GoogleLogo from './assets/google.svg';
-import { getGoogleUrl } from './utils/getGoogleUrl';
+import GoogleLogo from '../assets/googleLogo.png';
+import { getGoogleUrl } from '../../utils/getGoogleUrl';
 
 const from = '/';
 </script>
@@ -38,7 +38,6 @@ body {
 }
 
 .container {
-  background-color: #2363eb;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -70,6 +69,7 @@ body {
   margin-right: 1rem;
 }
 .google-auth span {
+  color: #222;
   font-size: 1.8rem;
 }
 
